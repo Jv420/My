@@ -1,0 +1,10 @@
+CreateThread(function()
+  Wait(10000)
+  TriggerServerEvent('jv-shop:playerReady')
+end)
+
+RegisterNetEvent('jv-shop:notify', function(message)
+  BeginTextCommandThefeedPost('STRING')
+  AddTextComponentSubstringPlayerName(message)
+  EndTextCommandThefeedPostTicker(false, false)
+end)
